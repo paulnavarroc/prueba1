@@ -45,11 +45,11 @@ $_SESSION['producto'][]=mysqli_fetch_assoc($res);
            <td>quantity</td>
        </tr>
        <?php if(isset($_SESSION['producto'])){
-        foreach ($_SESSION['producto'] as $key => $value) {?>
+        foreach ($_SESSION['producto'] as $key) {?>
            <tr>
-           <td><?php echo $value['id']; ?></td>
-           <td><?php echo $value['name']; ?></td>
-           <td><?php echo $value['quantity']; ?></td>
+           <td><?php echo $key['id']; ?></td>
+           <td><?php echo $key['name']; ?></td>
+           <td><?php echo $key['quantity']; ?></td>
            </tr>
        <?php } } ?>
     </table>
