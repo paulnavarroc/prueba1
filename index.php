@@ -44,21 +44,15 @@ $db_name = 'pruebadb';
             $res = mysqli_query($conn, 'SELECT * FROM inventory');
             while ($row = mysqli_fetch_assoc($res))
              {
-                var_dump($row);
+                <tr>
+                   <td><?php echo $row['id']; ?></td>
+                   <td><?php echo $row['name']; ?></td>
+                   <td><?php echo $row['quantity']; ?></td>
+                 </tr>
              }
-            $producto[]=mysqli_fetch_assoc($res);
-        
-        
-        
-        
-                if(isset($producto)){
-                foreach ($producto as $key) {?>
-                   <tr>
-                   <td><?php echo $key['id']; ?></td>
-                   <td><?php echo $key['name']; ?></td>
-                   <td><?php echo $key['quantity']; ?></td>
-                   </tr>
-               <?php } print_r($producto); } ?>
+           
+ 
+               <?php }  } ?>
     </table>
 </body>
 </html>
