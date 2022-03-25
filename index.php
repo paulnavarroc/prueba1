@@ -43,16 +43,16 @@ $db_name = 'pruebadb';
             printf("Reading data from table: \n");
             $res = mysqli_query($conn, 'SELECT * FROM inventory');
             while ($row = mysqli_fetch_assoc($res))
-             {
+             {?>
                 <tr>
                    <td><?php echo $row['id']; ?></td>
                    <td><?php echo $row['name']; ?></td>
                    <td><?php echo $row['quantity']; ?></td>
                  </tr>
-             }
+            
            
  
-               <?php }  } ?>
+               <?php }  ?>
     </table>
 </body>
 </html>
