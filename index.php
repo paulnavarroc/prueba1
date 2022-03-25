@@ -7,7 +7,7 @@ $db_name = 'pruebadb';
 //Initializes MySQLi
 $conn = mysqli_init();
 
-mysqli_ssl_set($conn,NULL,NULL, "/var/www/html/DigiCertGlobalRootG2.crt.pem", NULL, NULL);
+//mysqli_ssl_set($conn,NULL,NULL, "/var/www/html/DigiCertGlobalRootG2.crt.pem", NULL, NULL);
 
 // Establish the connection
 mysqli_real_connect($conn, 'myservidor.mysql.database.azure.com', 'pauln@myservidor', 'Paul.123', 'pruebadb', 3306, NULL, MYSQLI_CLIENT_SSL);
