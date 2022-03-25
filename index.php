@@ -26,7 +26,7 @@ while ($row = mysqli_fetch_assoc($res))
  {
     var_dump($row);
  }
-$_SESSION['producto'][]=$row;
+$_SESSION['producto'][]=mysqli_fetch_assoc($res);
 ?>
 
 <!DOCTYPE html>
