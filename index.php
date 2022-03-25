@@ -1,3 +1,4 @@
+<?php
 $host = 'myservidor.mysql.database.azure.com';
 $username = 'pauln@myservidor';
 $password = 'Paul.123';
@@ -24,3 +25,4 @@ while ($row = mysqli_fetch_assoc($res))
  {
     var_dump($row);
  }
+?>
