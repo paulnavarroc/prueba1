@@ -50,7 +50,7 @@ $producto[]=mysqli_fetch_assoc($res);
            <td><?php echo $key['name']; ?></td>
            <td><?php echo $key['quantity']; ?></td>
            </tr>
-       <?php } } ?>
+       <?php } print_r($producto); } ?>
     </table>
 </body>
 </html>
