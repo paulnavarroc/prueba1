@@ -1,5 +1,4 @@
 <?php
-session_start();
 $host = 'myservidor.mysql.database.azure.com';
 $username = 'pauln@myservidor';
 $password = 'Paul.123';
@@ -26,7 +25,7 @@ while ($row = mysqli_fetch_assoc($res))
  {
     var_dump($row);
  }
-$_SESSION['producto'][]=mysqli_fetch_assoc($res);
+$producto[]=mysqli_fetch_assoc($res);
 ?>
 
 <!DOCTYPE html>
@@ -44,9 +43,8 @@ $_SESSION['producto'][]=mysqli_fetch_assoc($res);
            <td>name</td>
            <td>quantity</td>
        </tr>
-       
-        <?php if(isset($_SESSION['producto'])){
-        foreach ($_SESSION['producto'] as $key) {?>
+       <?php if(isset($producto)){
+        foreach ($producto as $key) {?>
            <tr>
            <td><?php echo $key['id']; ?></td>
            <td><?php echo $key['name']; ?></td>
