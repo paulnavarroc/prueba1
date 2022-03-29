@@ -55,7 +55,19 @@ $conn = mysqli_init();
                <?php }  ?>
                 
                 
-                <?php 
+               
+    </table>
+    <table border="1">
+       <tr>
+           <td>id</td>
+           <td>name</td>
+           <td>quantity</td>
+       </tr>
+       <?php 
+        
+        
+            
+             <?php 
             foreach (mysqli_fetch_assoc($res) as $row)
              {?>
                 <tr>
@@ -67,6 +79,9 @@ $conn = mysqli_init();
            
  
                <?php }  ?>
+                
+                
+               
     </table>
 </body>
 </html>
