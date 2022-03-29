@@ -53,6 +53,20 @@ $conn = mysqli_init();
            
  
                <?php }  ?>
+                
+                
+                <?php 
+            foreach (mysqli_fetch_assoc($res) as $row)
+             {?>
+                <tr>
+                   <td><?php echo $row['id']; ?></td>
+                   <td><?php echo $row['name']; ?></td>
+                   <td><?php echo $row['quantity']; ?></td>
+                 </tr>
+            
+           
+ 
+               <?php }  ?>
     </table>
 </body>
 </html>
